@@ -1,8 +1,7 @@
 public class SavingAccount extends BankAccount {
-    double interestRate,principal,rate,years;
-    public void interestRate(){
-        interestRate=principal*rate*years/100;
-        System.out.println(" interestRate of the savings account"+interestRate);
+    public void interestRate(double principal,double rate,double years){
+        double interestrate=principal*rate*years/100;
+        System.out.println(" interestRate of the savings account "+interestrate);
     }
 
     public static void main(String[] args) {
@@ -10,6 +9,7 @@ public class SavingAccount extends BankAccount {
         System.out.println(bankaccount.accountNumber);
         bankaccount.deposit(1000);
         bankaccount.withdraw(500);
-
+        SavingAccount savingAccount= new SavingAccount();
+        savingAccount.interestRate(6000, 3,5);
     }
 }
