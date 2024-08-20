@@ -1,55 +1,46 @@
 package distancecalculation;
 import java.util.Scanner;
 public class Citydistance {
-    int a = 1;
-    int b = 3;
-    int c = 5;
-    int d = 7;
-    int e = 9;
+    static int a = 1;
+    static int b = 3;
+    static int c = 5;
+    static int d = 7;
+    static int e = 9;
 
-    public int calculation(int startingdistance, int endingdistance) {
-        if (startingdistance > endingdistance) {
-            return startingdistance - endingdistance;
-        } else {
-            return endingdistance - startingdistance;
-        }
-    }
-
-    public int switchCase(String location) {
-        int calculation = 0;
-        switch (location) {
-            case "a":
-                calculation = this.a;
-                break;
-            case "b":
-                calculation = this.b;
-                break;
-            case "c":
-                calculation = this.c;
-                break;
-            case "d":
-                calculation = this.d;
-                break;
-            case "e":
-                calculation = this.e;
-                break;
-            default:
-                System.out.println("invalid location");
-                break;
-        }
-        return calculation;
-    }
 
     public static void main(String[] args) {
-        Citydistance citydistance = new Citydistance();
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter the Starting: ");
+        System.out.println("enter the Starting city: ");
         String starting= sc.nextLine();
         System.out.println("enter the destination: ");
         String destination = sc.nextLine();
 
-        int Starting= citydistance.calculation(citydistance.switchCase(starting),citydistance.switchCase(destination));
-        System.out.println(Starting);
+        int startingcity= Getvalue(starting);
+        int destinationcity= Getvalue(destination);
+
+        if(startingcity ==0 || destinationcity==0){
+            System.out.println("check the given value");
+        } else {
+            int distance= Math.abs(startingcity - destinationcity);
+            System.out.println("The difference between starting city "+ starting + "and destination city"+ destination+ " is "+ distance);
+        }
+    }
+
+    public static int Getvalue(String city){
+        switch (city){
+            case "a":
+                return a;
+            case "b":
+                return b;
+            case "c":
+                return c;
+            case "d":
+                return d;
+            case "e":
+                return e;
+            default:
+                return 0;
+        }
     }
 }
 
