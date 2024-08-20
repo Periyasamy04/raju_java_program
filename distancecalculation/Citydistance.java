@@ -1,22 +1,21 @@
 package distancecalculation;
 import java.util.Scanner;
 public class Citydistance {
-    static int a = 1;
-    static int b = 3;
-    static int c = 5;
-    static int d = 7;
-    static int e = 9;
-
 
     public static void main(String[] args) {
+        int a = 1;
+        int b = 3;
+        int c = 5;
+        int d = 7;
+        int e = 9;
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the Starting city: ");
         String starting= sc.nextLine();
         System.out.println("enter the destination: ");
         String destination = sc.nextLine();
 
-        int startingcity= Getvalue(starting);
-        int destinationcity= Getvalue(destination);
+        int startingcity= Getvalue(starting,a,b,c,d,e);
+        int destinationcity= Getvalue(destination,a,b,c,d,e);
 
         if(startingcity ==0 || destinationcity==0){
             System.out.println("check the given value");
@@ -26,7 +25,7 @@ public class Citydistance {
         }
     }
 
-    public static int Getvalue(String city){
+    public static int Getvalue(String city,int a, int b, int c, int d, int e){
         switch (city){
             case "a":
                 return a;
