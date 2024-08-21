@@ -16,15 +16,30 @@ public class Conversion {
         }
     }
 
+    public void numberCheck(int value){
+        if(value/100000 > 0){
+            check(value / 1000000,"Lakhs");
+            value= value % 1000000;
+        }
+        if(value/ 1000 >0){
+            check(value /1000,"Thousand");
+            value= value % 1000;
+        }
+        if(value/100 >0){
+            check(value /100,"Hundred");
+            value= value % 100;
+        }
+        if(value >0){
+            check(value,"");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number: ");
         int value = sc.nextInt();
         Conversion conversion = new Conversion();
-        conversion.check((value / 100000) % 100, " Lakhs ");
-        conversion.check((value / 1000) % 100, " thounsand ");
-        conversion.check((value / 100) % 10, " Hundred ");
-        conversion.check(value % 100, "");
+        conversion.numberCheck(value);
     }
 }
 
