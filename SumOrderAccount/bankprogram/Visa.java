@@ -1,0 +1,32 @@
+package SumOrderAccount.bankprogram;
+
+import java.util.Date;
+
+public abstract class Visa {
+//    String type;
+//    String cardName;
+//    String cvv;
+//    Date expiryDate;
+//    String accountHolder;
+    int pin= 6804;
+    String cardNumber="SPAN2504";
+    double balance=3000;
+
+    public abstract boolean authenticate(String cardNumber, int pin);
+
+    public abstract double getbalance();
+
+    protected double withdraw(double amount) {
+        double balance = getbalance();
+            if (balance < amount) {
+                System.out.println("insufficient amount");
+                return 0;
+            }
+
+            balance = balance - amount;
+            System.out.println("Your balance amount is: "+balance);
+            return amount;
+        }
+    }
+
+
