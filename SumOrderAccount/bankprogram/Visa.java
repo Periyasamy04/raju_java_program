@@ -8,9 +8,9 @@ public abstract class Visa {
 //    String cvv;
 //    Date expiryDate;
 //    String accountHolder;
-    int pin= 6804;
-    String cardNumber="SPAN2504";
-    double balance=3000;
+    int pin;
+    String cardNumber;
+    double balance;
 
     public abstract boolean authenticate(String cardNumber, int pin);
 
