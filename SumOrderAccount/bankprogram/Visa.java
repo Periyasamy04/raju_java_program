@@ -22,10 +22,11 @@ public abstract class Visa {
                 System.out.println("insufficient amount");
                 return 0;
             }
-
-            balance = balance - amount;
-            System.out.println("Your balance amount is: "+balance);
-            return amount;
+            else {
+                balance = balance - amount;
+                System.out.println("Your balance amount is: " + balance);
+                return amount;
+            }
         }
     }
 
