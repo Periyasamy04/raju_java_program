@@ -6,8 +6,8 @@ public class FederalBank extends Visa {
     double balance=5000;
 
     @Override
-    public boolean authenticate(String cardnumber, int pinnumber) {
-            return this.cardNumber.equals(cardnumber)&&  this.pin== pinnumber;
+    public boolean authenticate(String cardNumber, int pinNumber) {
+            return this.cardNumber.equals(cardNumber) && this.pin== pinNumber;
     }
 
     @Override
