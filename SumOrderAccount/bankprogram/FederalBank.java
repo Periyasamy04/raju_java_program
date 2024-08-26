@@ -11,7 +11,7 @@ public class FederalBank extends Visa {
     }
 
     @Override
-    public double getbalance() {
+    public double getBalance() {
         return balance;
     }
 }
