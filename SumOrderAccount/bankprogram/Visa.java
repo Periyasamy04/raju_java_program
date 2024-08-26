@@ -14,16 +14,16 @@ public abstract class Visa {
 
     public abstract boolean authenticate(String cardNumber, int pin);
 
-    public abstract double getbalance();
+    public abstract double getBalance();
 
     protected double withdraw(double amount) {
-        double balance = getbalance();
+        double balance = getBalance();
             if (balance < amount) {
                 System.out.println("insufficient amount");
                 return 0;
             }
             else {
-                balance = balance - amount;
+                balance -= amount;
                 System.out.println("Your balance amount is: " + balance);
                 return amount;
             }
