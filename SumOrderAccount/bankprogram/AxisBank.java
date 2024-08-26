@@ -6,12 +6,12 @@ public class AxisBank extends Visa {
     double balance=2500;
 
     @Override
-    public boolean authenticate(String cardnumber, int pinnumber) {
-            return this.cardNumber.equals(cardnumber)&&  this.pin== pinnumber;
+    public boolean authenticate(String cardNumber, int pinNumber) {
+            return this.cardNumber.equals(cardNumber)&&  this.pin== pinNumber;
     }
 
     @Override
-    public double getbalance() {
+    public double getBalance() {
         return balance ;
     }
 }
