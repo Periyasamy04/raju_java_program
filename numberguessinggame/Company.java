@@ -1,7 +1,12 @@
 package numberguessinggame;
 
 public class Company extends Contact {
-    int gstNumber=8825828;
-    int establishedYear=2004;
+    int gstNumber;
+    int establishedYear;
 
+    public Company(int phoneNumber, String name, String emailId,int gstNumber,int establishedYear){
+        super(phoneNumber,name,emailId);
+        this.gstNumber=gstNumber;
+        this.establishedYear=establishedYear;
+    }
 }

@@ -1,8 +1,13 @@
 package numberguessinggame;
 
 public class Contact {
-    int phoneNumber=967701150;
-    String name="Raju";
-    String emailId="periyasamy6804@gmail.com";
+    int phoneNumber;
+    String name;
+    String emailId;
 
+    public Contact(int phoneNumber, String name, String emailId){
+        this.phoneNumber=phoneNumber;
+        this.name=name;
+        this.emailId=emailId;
+    }
 }
