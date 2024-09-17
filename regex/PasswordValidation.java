@@ -20,17 +20,19 @@ public class PasswordValidation {
 
             for (int i = 0; i < password.length(); i++) {
                 if (arr[i] == 1) {
-                    System.out.println("valid password.");
                     return true;
                 }
             }
         }
-        System.out.println("invalid password.");
         return false;
     }
 
     public static void main(String[] args) {
         PasswordValidation passwordValidation=new PasswordValidation();
-        System.out.println(passwordValidation.isValidPassword("ABCabc123@#*"));
+        if(passwordValidation.isValidPassword("ABCabc113@#*")){
+            System.out.println("valid Password");
+        }else{
+            System.out.println("invalid Password");
+        }
     }
 }
