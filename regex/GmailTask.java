@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class GmailTask {
     boolean isValidEmail(String email){
-        String regexpattern="[A-Za-z0-9]+@[A-Za-z0-9]+.[A-Za-z]{2,4}";
+        String regexpattern="[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]{2,4}";
         Pattern pattern = Pattern.compile(regexpattern);
         Matcher matcher = pattern.matcher(email);
 
