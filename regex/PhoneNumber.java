@@ -9,15 +9,18 @@ public class PhoneNumber {
         String phoneNumberregex = "\\(\\+\\d{2}\\)\\s\\d{5}-\\d{5}|\\d{3}-\\d{3}-\\d{4}";
         Pattern pattern = Pattern.compile(phoneNumberregex);
         Matcher matcher = pattern.matcher(text);
-        String output="";
+        StringBuilder output=new StringBuilder();
         while(matcher.find()){
-            output=output+matcher.group() + " or ";
+            if(!output.isEmpty()){
+                output.append(" Or ");
+            }
+            output.append(matcher.group());
         }
-        if(output.isEmpty()){
-            return "Null";
+        if(!output.isEmpty()){
+            return output.toString();
         }
         else
-            return output;
+            return "Null";
     }
 
     public static void main(String[] args) {
