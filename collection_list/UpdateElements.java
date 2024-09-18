@@ -1,21 +1,23 @@
 package collection_list;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class UpdateElements {
     public static void main(String[] args) {
-        List<Integer> list=new ArrayList<Integer>();
-        list.add(12);
-        list.add(14);
-        list.add(16);
-        list.add(18);
-        list.add(20);
+        List<String> list=new ArrayList<String>();
+        list.add("Suriya");
+        list.add("Raju");
+        list.add("Saran");
+        list.add("Dinesh");
+        list.add("Naveen");
 
-        for(int i=0; i<list.size();i++){
-            System.out.println(list.get(i));
-        }
-
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Select the value you want to be replaced "+list + ":");
+        String updatevalue= scanner.nextLine();
+        int indexValue= list.indexOf(updatevalue);
+        System.out.print("Enter the value You want to Update: ");
+        String changingelement= scanner.nextLine();
+        list.set(indexValue,changingelement);
+        System.out.println(list);
     }
 }
