@@ -10,7 +10,6 @@ public class CreateTableJDBC {
         String url = "jdbc:sqlserver://192.168.0.49\\HEALNET;databaseName=interndb_periyasamy;encrypt=true;trustServerCertificate=true";
         String user = "periyasamy";
         String password = "Raju@6804";
-        String retrieve= "SELECT * FROM Books";
         String createtableSQL= "CREATE TABLE books("+"Book_ID INT PRIMARY KEY," + "Book_Name VARCHAR(50)," + "Book_Author VARCHAR(50))";
 
         try {
