@@ -14,10 +14,10 @@ public class RetriveRecordsJDBC {
             Statement statement= connection.createStatement();
             ResultSet resultSet= statement.executeQuery(retrieveSQL);
             while(resultSet.next()) {
-                System.out.println("Book ID: " + resultSet.getInt("Book_id"));
-                System.out.println("Book Name: " + resultSet.getString("Book_Name"));
-                System.out.println("Book Author: "+ resultSet.getString("Book_Author"));
-                System.out.println();
+                int BookID= resultSet.getInt("Book_id");
+                String BookName= resultSet.getString("Book_Name");
+                String BookAuthor= resultSet.getString("Book_Author");
+                System.out.println(BookID + "\t" + BookName + "\t\t" + BookAuthor);
             }
         } catch (SQLException e) {
             e.printStackTrace();
