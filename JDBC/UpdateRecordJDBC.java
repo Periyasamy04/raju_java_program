@@ -16,11 +16,11 @@ public class UpdateRecordJDBC {
         String url = "jdbc:sqlserver://192.168.0.49\\HEALNET;databaseName=interndb_periyasamy;encrypt=true;trustServerCertificate=true";
         String user = "periyasamy";
         String password = "Raju@6804";
-        String UpdateQuary= "UPDATE Books SET Book_Name=? WHERE Book_ID=?";
+        String UpdateQuery= "UPDATE Books SET Book_Name=? WHERE Book_ID=?";
 
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            PreparedStatement statement= connection.prepareStatement(UpdateQuary);
+            PreparedStatement statement= connection.prepareStatement(UpdateQuery);
             statement.setString(1,NewBookName);
             statement.setInt(2,BookID);
             statement.executeUpdate();
