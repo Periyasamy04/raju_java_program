@@ -15,7 +15,7 @@ public class DeleteRecordJDBC {
 
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            PreparedStatement statement= connection.prepareStatement(deleteQuary);
+            PreparedStatement statement= connection.prepareStatement(deleteQuery);
             statement.setInt(1,BookID);
             statement.execute();
             System.out.println("The Record is Deleted Successfully. ");
