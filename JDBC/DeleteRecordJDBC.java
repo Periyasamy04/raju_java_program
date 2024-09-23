@@ -11,7 +11,7 @@ public class DeleteRecordJDBC {
         String url = "jdbc:sqlserver://192.168.0.49\\HEALNET;databaseName=interndb_periyasamy;encrypt=true;trustServerCertificate=true";
         String user = "periyasamy";
         String password = "Raju@6804";
-        String deleteQuary= "DELETE FROM Books WHERE Book_ID=?";
+        String deleteQuery= "DELETE FROM Books WHERE Book_ID=?";
 
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
