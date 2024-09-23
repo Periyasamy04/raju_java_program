@@ -13,7 +13,7 @@ public class InsertRecordJDBC {
 
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            String Sqlrecord= "INSERT INTO Books VALUES (001,'Naruto Classic Manga','Masashi Kishimoto'),(002,'Demonslayer Manga','Koyoharu Gotouge'),(003,'Naruto Shippuden Manga','Masashi Kishimoto')";
+            String Sqlrecord= "INSERT INTO Books VALUES (001,'Naruto Classic Manga','Masashi Kishimoto'),(002,'Demonslayer Manga','Koyoharu Gotouge'),(003,'Naruto Shippuden Manga','Masashi Kishimoto'),(004,'Dragon Ball','Akira Toriyama'),(005,'One Piece','Eiichiro Oda')";
 
             Statement statement = connection.createStatement();
             statement.execute(Sqlrecord);
