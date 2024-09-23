@@ -14,8 +14,8 @@ public class CountRecordJDBC {
             Statement statement= connection.createStatement();
             ResultSet resultSet= statement.executeQuery(CountQuary);
             resultSet.next();
-
-            System.out.println("The Total number of Records is: " + resultSet.getInt("count"));
+            int Output= resultSet.getInt("count");
+            System.out.println("The Total number of Records is: " + Output);
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
