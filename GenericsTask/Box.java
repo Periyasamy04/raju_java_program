@@ -12,7 +12,7 @@ public class Box<p> {
 
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        // Intput values
+        // Integer values
         System.out.print("Enter the Integer Value: ");
         int intinput= scanner.nextInt();
         Box<Integer> intvalue=new Box<>();
