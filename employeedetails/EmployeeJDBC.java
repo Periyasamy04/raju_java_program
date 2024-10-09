@@ -1,6 +1,7 @@
 package employeedetails;
 
 public class EmployeeJDBC {
+
     //Basic Details
     public String employeeId;
     public String firstName;
