@@ -134,8 +134,7 @@ public class EmployeeJDBC {
         employeeJDBC.setPanNumber("ABCD123456");
         employeeJDBC.setAadharNumber("1234567890235678");
         employeeJDBC.setBackGroundCheckStatus("Good Background with No Arrears, No Redo, No Suspends");
-        BankDetails bankDetails = new BankDetails("Periyasamy S","123456789",
-                "Axis Bank","Korattur");
+        BankDetails bankDetails = new BankDetails("Periyasamy S","123456789", "Axis Bank","Korattur");
         EmploymentEligibilityVerification employmentEligibilityVerification1 = new EmploymentEligibilityVerification("86","Saveetha252410040","Saveetha25");
         employeeJDBC.printDetails();
         System.out.println("Bank Account Details: " + bankDetails);
