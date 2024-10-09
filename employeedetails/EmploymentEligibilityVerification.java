@@ -13,7 +13,7 @@ public class EmploymentEligibilityVerification {
 
     @Override
     public String toString() {
-        return "CGPA Percentage: " + cgpaPercentage + "\n"
+        return "\nCGPA Percentage: " + cgpaPercentage + "\n"
                 + "Degree Number: " + degreeRegisteredNumber + "\n"
                 + "TC Number: " + tcNumber;
     }
