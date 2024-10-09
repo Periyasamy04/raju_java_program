@@ -1,7 +1,16 @@
 package employeedetails;
 
 public class EmployeeJDBC {
-
+    //Basic Details
+    public String employeeId;
+    public String firstName;
+    public String lastName;
+    public String middleName;
+    public String dateOfBirth;
+    public String gender;
+    public String emailAddress;
+    public String phoneNumber;
+    public Address address;
     //Employment Details
     public String jobTitle;
     public String department;
@@ -23,7 +32,11 @@ public class EmployeeJDBC {
     private String employmentEligibilityVerification;
     private String backGroundCheckStatus;
 
-    EmployeeJDBC(String jobTitle, String department,
+    EmployeeJDBC( String employeeId, String firstName,
+                  String lastName, String middleName,
+                  String dateOfBirth, String gender,
+                  String emailAddress, String phoneNumber,
+                  Address address, String jobTitle, String department,
               String managerId, String dateOfJoining,
               String employmentStatus, String salary,
               String workSalary,String emergencyContact,
@@ -41,6 +54,15 @@ public class EmployeeJDBC {
         this.education = education;
         this.certification = certification;
         this.performanceReviews = performanceReviews;
+        this.employeeId = employeeId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
     }
     //Getter & Setter
     //PAN Number
@@ -80,26 +102,43 @@ public class EmployeeJDBC {
     }
 
     public void printDetails() {
-        System.out.println("Job Title: " + jobTitle + "\n" + "Department: " + department + "\n"
+        System.out.println("Basic Details: " + "\n"
+                + "Employee Id: " + employeeId + "\n" + "First Name: " + firstName + "\n"
+                + "Last Name: " + lastName + "\n" + middleName + "\n" + "Date of Birth: " + dateOfBirth + "\n"
+                + "Gender: " + gender + "\n" + "Email Address: " + emailAddress + "\n"
+                + "Phone Number: " + phoneNumber + "\n" + "Address: " + address + "\n" + "\n"
+                + "Employment Details: " + "\n" + "Job Title: " + jobTitle + "\n" + "Department: " + department + "\n"
                         + "Manager ID: " + managerId + "\n" + "Date of Joining: " + dateofJoining + "\n"
-                        + "Employment_Status: " + employmentstatus + "\n" + "Salary; " + salary + "\n"
-                        + "Work_Salary: " + workSalary + "\n" + "Emergency_Contact: " + emergencyContact + "\n"
-                        + "Skills: " + skills + "\n" + "Education: " + education + "\n"
-                        + "Certification: " + certification + "\n" + "Performance Reviews: " + performanceReviews + "\n"
+                        + "Employment_Status: " + employmentstatus + "\n" + "Salary: " + salary + "\n"
+                        + "Work_Salary: " + workSalary + "\n" + "\n" + "Additional Information: " + "\n"
+                        + "Emergency_Contact: " + emergencyContact + "\n" + "Skills: " + skills + "\n"
+                        + "Education: " + education + "\n" + "Certification: " + certification + "\n"
+                        + "Performance Reviews: " + performanceReviews + "\n" + "\n" + "Compliance and Documentation: " + "\n"
                         + "PAN Number: " + panNumber + "\n" + "Aadhar Number: " + aadharNumber + "\n"
-                        + "BackGround Check Status: " + backGroundCheckStatus);
+                        + "BackGround Check Status: " + backGroundCheckStatus + "\n");
     }
 
     public static void main(String[] args) {
-        EmployeeJDBC employeeJDBC = new EmployeeJDBC("Intern","BCA",
-                "CI2404","15-06-2024","Full-Time","Employee's Salary","Medavakkam","8825850642","Java","BCA","Interning at C-Cubics","Growth");
+
+        Address address1 =new Address("NO:5/9 Banu Nagar","2nd Avenue Ambattur",
+                "Chennai","TamilNadu","600099");
+        EmployeeJDBC employeeJDBC = new EmployeeJDBC("CI2404","Raju",
+                "S","Bhai",
+                "06-08-2004","male",
+                "periyasamy6804@gmail.com",
+                "9677011150",address1,"Intern","BCA",
+                "CI2404","15-06-2024","Full-Time",
+                "Employee's Salary","Medavakkam","8825850642",
+                "Java","BCA","Interning at C-Cubics",
+                "Growth");
         employeeJDBC.setPanNumber("ABCD123456");
         employeeJDBC.setAadharNumber("1234567890235678");
         employeeJDBC.setBackGroundCheckStatus("Good Background with No Arrears, No Redo, No Suspends");
-        BankDetails bankDetails = new BankDetails("Periyasamy S","123456789","Axis Bank","Korattur");
+        BankDetails bankDetails = new BankDetails("Periyasamy S","123456789",
+                "Axis Bank","Korattur");
         EmploymentEligibilityVerification employmentEligibilityVerification1 = new EmploymentEligibilityVerification("86","Saveetha252410040","Saveetha25");
         employeeJDBC.printDetails();
-        System.out.println(bankDetails);
-        System.out.println(employmentEligibilityVerification1);
+        System.out.println("Bank Account Details: " + bankDetails);
+        System.out.println("\nEmployment Eligibility Verification: " + employmentEligibilityVerification1);
     }
 }
