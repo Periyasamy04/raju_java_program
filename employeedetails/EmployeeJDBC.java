@@ -120,7 +120,6 @@ public class EmployeeJDBC {
     }
 
     public static void main(String[] args) {
-
         Address address1 =new Address("NO:5/9 Banu Nagar","2nd Avenue Ambattur",
                 "Chennai","TamilNadu","600099");
         EmployeeJDBC employeeJDBC = new EmployeeJDBC("CI2404","Raju",
