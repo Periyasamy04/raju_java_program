@@ -14,7 +14,6 @@ public class Address {
         this.state = state;
         this.pinCode = pinCode;
     }
-
     @Override
     public String toString() {
         return addressLine1 + ", " + addressLine2 + ", " + "\nCity: " + city + "\nState: " + state + "\nPinCode: " + pinCode;
