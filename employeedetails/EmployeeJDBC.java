@@ -130,7 +130,7 @@ public class EmployeeJDBC {
                 "9677011150",address1,"Intern","BCA",
                 "CI2404","15-06-2024","Full-Time",
                 "Employee's Salary","Medavakkam","8825850642",
-                "Java","BCA","Interning at C-Cubics",
+                "Java","BCA in saveetha Liberals Arts and Science","Intern in C-Cubics",
                 "Growth");
         employeeJDBC.setPanNumber("ABCD123456");
         employeeJDBC.setAadharNumber("1234567890235678");
